@@ -1,14 +1,17 @@
 
 
-function CardControls({ }) {
+function CardControls({addLayer, layer, cardLayers }) {
   return (  
-    <section className='controls'>
-      {cardLayers.map((layer, index) =>
-        <button> Add Card
-
+    <form className='controls'>
+        <textarea 
+        name="card"  
+        value={cardLayers}
+        ></textarea>
+        <button  onClick={addLayer}> Add Card
+    
         </button>
-      )}
-  </section>
+
+  </form>
   )
 }
 

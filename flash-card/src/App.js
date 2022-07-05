@@ -1,18 +1,22 @@
 import './App.css';
-import FlashCard from './components/FlashCard'
+import Main from './components/Main'
 import { Routes, Route, Link } from 'react-router-dom'
 import Home from './components/Home'
+import Learn from './components/Learn'
+
 function App() {
   return (
     <div className="App">
       <nav>
         <Link to='/'>Home</Link>
-        <Link to='/FlashCard'>FlashCard</Link>
+        <Link to='/Main'>Create Flash Cards</Link>
+        <Link to='/Learn'>Learn</Link>
       </nav>
 
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='/FlashCard' element={<FlashCard />}/>
+        <Route path='/Main' element={<Main />}/>
+        <Route path='/Learn' element={<Learn />}/>
       </Routes>
     </div>
   );
