@@ -1,0 +1,73 @@
+body {
+  background-image: url('../images/milad-fakurian-58Z17lnVS4U-unsplash.jpg');
+  background-size: 100%;
+}
+
+.card-details {
+  display:inline-block;
+  position: relative;
+}
+
+p {
+  box-sizing: border-box;
+  border: 2px solid aliceblue;
+  width: 150px;
+  height: 150px;
+  margin: 6px;
+  text-align: center;
+  overflow-wrap: break-word;
+  color: aliceblue;
+  background-color: transparentize($color: #000000, $amount: 0.75);
+}
+
+.word {
+  font-size: xx-large;
+}
+
+
+.child {
+  display: flex ;
+  position: absolute;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: aliceblue;
+  height: 75px;
+
+}
+
+a {
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.para-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+
+}
+
+h4, h3 {
+  width: 770px;
+  color: aliceblue;
+  margin-top: 2px;
+}
+
+h1 {
+  font-size: 200px;
+  color: aliceblue;
+  margin-top: -20px;
+}
+
+.top-para {
+  margin-top: -100px;
+}
+h2 {
+  color: aliceblue;
+  font-size: 40px;
+}

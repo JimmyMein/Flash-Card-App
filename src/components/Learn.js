@@ -1,34 +1,15 @@
-import { useState } from 'react'
-import AddFlashCard from './AddFlashCard.js'
+import './Card.scss'
+function Learn({ cards, setCards, changeCardSide }) {
 
-function Learn({ addCard }) {
-  const [word, setWord] = useState('')
-  const [definition, setDefinition] = useState('')
-
-  const handleWordChange = (event) => {
-    setWord(event.target.value)
-  }
-
-  const handleDefinitionChange = (event) => {
-    setDefinition(event.target.value)
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
-    addCard({word, definition})
-    setWord('')
-    setDefinition('')
-  }
-
+  
   return (
     <section className='child'>
-      <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="word" value={word}  onChange={handleWordChange} />
-      <input type="text" placeholder="definition"  value={definition}  onChange={handleDefinitionChange} />
-      <button type="submit" >Add Card</button>
-      </form>
-
+      {cards.map((card, index) =>
+      <div className="card-details"onClick={() => changeCardSide(index)}>
+          {card.flipped ? <p className='definition'>{card.definition}</p> : <p className='word' key={index}>{card.word} </p>
+          }
+       </div> )}
+        
     </section>
   )
 
